@@ -1,20 +1,29 @@
 {
-  "name": "chatcord",
+  "name": "prebuilt-ui",
   "version": "1.0.0",
-  "description": "Real time chat",
-  "main": "server.js",
+  "description": "demo of Daily's prebuilt UI for video calls",
   "scripts": {
-    "start": "node server",
-    "dev": "nodemon server"
+    "prettify": "prettier --write \"./**/*.{js,css,html,md}\"",
+    "dev": "http-server",
+    "netlify-build": "sed -i s/DAILY_API_KEY_PLACEHOLDER/${DAILY_API_KEY}/g netlify.toml"
   },
-  "author": "Khairul Imran",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daily-demos/prebuilt-ui.git"
+  },
+  "keywords": [
+    "video",
+    "webrtc",
+    "daily"
+  ],
+  "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "moment": "^2.29.1",
-    "socket.io": "^3.0.1"
+  "bugs": {
+    "url": "https://github.com/daily-demos/prebuilt-ui/issues"
   },
+  "homepage": "https://github.com/daily-demos/prebuilt-ui#readme",
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    "http-server": "^0.12.3",
+    "prettier": "^2.2.1"
   }
 }
